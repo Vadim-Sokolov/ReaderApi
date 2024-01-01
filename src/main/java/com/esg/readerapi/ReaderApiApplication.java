@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ReaderapiApplication {
+public class ReaderApiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ReaderapiApplication.class, args);
+		SpringApplication.run(ReaderApiApplication.class, args);
 	}
 
 }

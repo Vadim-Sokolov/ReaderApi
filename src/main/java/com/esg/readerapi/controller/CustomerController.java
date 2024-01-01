@@ -11,7 +11,7 @@ import reactor.core.publisher.Mono;
 
 @RestController
 @Slf4j
-@RequestMapping("/customers")
+@RequestMapping("/customer")
 public class CustomerController {
 
     private final CustomerService customerService;
