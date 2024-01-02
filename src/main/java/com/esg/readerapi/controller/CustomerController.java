@@ -29,7 +29,9 @@ public class CustomerController {
     }
 
     @GetMapping("/{refNumber}")
-    public String getCustomerByReferenceNumber(@PathVariable Integer refNumber) {
-        return "Requested ID: " + refNumber;
+    public Mono<ResponseEntity<CustomerDto>> getCustomerByReferenceNumber(@PathVariable Integer refNumber) {
+        log.debug("Calling customerService.getCustomerByReferenceNumber() method.");
+        return customerService.getCustomerByReferenceNumber(refNumber)
+                .map(cutomerDto -> new ResponseEntity<>(cutomerDto, HttpStatus.OK));
     }
 }
